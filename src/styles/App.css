@@ -1368,32 +1368,18 @@ a {
   padding-right: 4px;
 }
 
-.program-chip-grid button {
+.program-chip {
   max-width: 100%;
   border: 1px solid rgba(92, 59, 34, 0.28);
   border-radius: 8px;
   background: #fffefa;
   color: var(--soil);
+  display: inline-flex;
   font-weight: 900;
+  justify-content: center;
   line-height: 1.25;
   padding: 9px 13px;
-}
-
-.program-chip-grid button.is-active,
-.program-chip-grid button:hover {
-  border-color: rgba(47, 123, 79, 0.62);
-  background: var(--leaf-pale);
-  color: var(--leaf-dark);
-}
-
-.program-detail {
-  margin: 0;
-  border-radius: 8px;
-  background: rgba(47, 123, 79, 0.08);
-  color: var(--leaf-dark);
-  font-weight: 800;
-  line-height: 1.5;
-  padding: 12px;
+  text-align: center;
 }
 
 .result-meta {

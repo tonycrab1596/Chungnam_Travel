@@ -1,21 +1,15 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo } from "react";
 import { makeExternalMapLinks, splitProgramItems } from "../utils/parseVillageData.js";
 
 // 캡슐 뽑기 결과로 선택된 여행지의 핵심 정보를 보여주는 카드입니다.
 function VillageResultCard({ village, onViewOnMap, onReroll, isAnimating }) {
   const programItems = useMemo(() => splitProgramItems(village?.programName), [village]);
-  const [activeProgram, setActiveProgram] = useState("");
-
-  useEffect(() => {
-    setActiveProgram("");
-  }, [village?.id]);
 
   if (!village) {
     return null;
   }
 
   const links = makeExternalMapLinks(village);
-  const selectedProgram = activeProgram || programItems[0] || village.programName;
 
   return (
     <article className="result-card">
@@ -30,15 +24,13 @@ function VillageResultCard({ village, onViewOnMap, onReroll, isAnimating }) {
         </div>
         <div className="program-chip-grid">
           {(programItems.length ? programItems : [village.programName]).map((program) => (
-            <button
+            <span
               key={program}
-              type="button"
-              className={selectedProgram === program ? "is-active" : ""}
-              onClick={() => setActiveProgram(program)}
+              className="program-chip"
               title={program}
             >
               {program}
-            </button>
+            </span>
           ))}
         </div>
       </section>
