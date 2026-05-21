@@ -1625,27 +1625,6 @@ a {
     linear-gradient(135deg, rgba(255, 235, 118, 0.82), rgba(64, 166, 126, 0.9));
 }
 
-.picker-modal.machine-stage .drawing-copy {
-  position: absolute;
-  left: 50%;
-  bottom: 30px;
-  transform: translateX(-50%);
-  width: min(460px, 86%);
-  border: 1px solid rgba(92, 59, 34, 0.12);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.86);
-  padding: 12px 18px;
-  box-shadow: 0 12px 22px rgba(52, 42, 31, 0.1);
-}
-
-.picker-modal.machine-stage .drawing-copy strong {
-  font-size: 1.2rem;
-}
-
-.picker-modal.machine-stage .drawing-copy span {
-  font-size: 0.92rem;
-}
-
 .picker-modal.machine-stage .capsule-machine.is-running .capsule {
   animation: ballRollShake 0.34s ease-in-out infinite;
   animation-delay: var(--delay);

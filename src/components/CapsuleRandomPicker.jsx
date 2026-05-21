@@ -237,10 +237,6 @@ function CapsuleRandomPicker({ villages, selectedVillage, history, onPickComplet
                   </div>
                 </div>
 
-                <div className="drawing-copy">
-                  <strong>캡슐을 섞는 중입니다</strong>
-                  <span>캡슐이 굴러가고 손잡이가 돌아갑니다.</span>
-                </div>
               </div>
             )}
 
